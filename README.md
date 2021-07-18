@@ -2,7 +2,7 @@
 
 ## Creating a new command
 ### Add command name to Commands class
-```
+```java
 public class Commands {
     // snipped out
     public static final String demoCommand = commandInitChar + "demo";
@@ -10,7 +10,7 @@ public class Commands {
 ```
  
 ### Add command class that extends DefaultBotCommand 
-```
+```java
 public class DemoCommand extends DefaultBotCommand {
 
     public DemoCommand() {
@@ -35,7 +35,7 @@ public class DemoCommand extends DefaultBotCommand {
 }
 ```
 ### Register command in CommandHandler class
-```
+```java
 public class CommandHandler extends TelegramLongPollingCommandBot {
 
     public CommandHandler() {
