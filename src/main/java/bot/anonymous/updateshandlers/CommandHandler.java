@@ -15,6 +15,7 @@ public class CommandHandler extends TelegramLongPollingCommandBot {
         register(new QuoteCommand());
         register(new QotdCommand());
         register(new EthCommand());
+        register(new SourceCommand());
 
     }
 
