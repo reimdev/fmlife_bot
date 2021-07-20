@@ -15,15 +15,18 @@ public class ApiClient {
             URL url = new URL(urlstr);
             huc = (HttpURLConnection) url.openConnection();
 
-            return streamToString(huc.getInputStream());
+            if (huc.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                return streamToString(huc.getInputStream());
+            }
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
         } finally {
             if (huc != null) {
                 huc.disconnect();
             }
         }
+
+        return null;
     }
 
     public String streamToString(InputStream in) throws IOException {
