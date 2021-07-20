@@ -9,13 +9,13 @@ public class CommandHandler extends TelegramLongPollingCommandBot {
 
     public CommandHandler() {
 
-
         register(new RollCommand());
         register(new FortuneCommand());
         register(new QuoteCommand());
         register(new QotdCommand());
         register(new EthCommand());
         register(new SourceCommand());
+        register(new WeatherCommand());
 
     }
 
