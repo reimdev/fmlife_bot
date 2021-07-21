@@ -69,6 +69,8 @@ class CityWeather {
     private int humidity;
     private double temperature;
 
+    private CityWeather() {}
+
     public static CityWeather fromJson(String jsonStr) {
         JSONObject jsonObject = new JSONObject(jsonStr);
 
